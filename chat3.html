@@ -1,0 +1,19 @@
+<HTML>
+<body>
+<script type="text/javascript">
+    var queryDict = {}
+    location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]})
+    if queryDict['name'] != null {
+        var userlikeData = {};
+        userlikeData.user = {};
+        userlikeData.user.name = queryDict['name'];
+        userlikeData.user.email = queryDict['email'];
+    }
+</script>
+<script type="text/javascript" src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/290407e7cb963d18844afd9a0fd17dc459093b5c1f229a078dae4e7d7484cf05.js"></script>
+<div id="userlikeCustomTab"data-position-"window" data-top=0 data-right=0 data-bottom=0 data-left=0></div>
+<div id="message" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+  Please wait for operator.
+</div>
+</body>
+</HTML>
